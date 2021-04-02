@@ -91,15 +91,25 @@ ol {
 }
 
 
-a:link,
-a:visited {
-  color: #f1505a;
+.more-link:link,
+.more-link:visited {
+    background-color: transparent;
+    border: 1px solid #64B1F3;
+    border-radius: 5px;
+    color: #64B1F3;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    padding: 10px 10px;
+    font-size: 14px;
 }
 
-a:hover,
-a:active {
-  color: #f1505a;
-  text-decoration: underline;
+.more-link:hover,
+.more-link:active {
+  background-color: #64B1F3;
+  color: white !important;
+  border: 1px solid #64B1F3;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 h1,
@@ -248,10 +258,15 @@ ul#menu-main > li > a:hover {
   text-shadow: none;
 }
 
+.my-nav > li:hover {
+  padding-bottom: .2em;
+  border-bottom: 0.2em solid #A5FECB;
+}
+
 /* ----------------------------------------------------------------------------------------------------------
 05 Single-Page Sections ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-/* 
+/*
 #headerwrap{
     background:url(../image/bg4.jpg) #000000 no-repeat center center;
 }
@@ -402,9 +417,13 @@ section#features .span3 {
 section#features .span3:hover {
   color: #ffffff;
   background: #212121;
-  -webkit-box-shadow: 2px 5px 10px -7px #FFF, -6px 1px 6px 8px rgba(0,0,0,0); 
+  -webkit-box-shadow: 2px 5px 10px -7px #FFF, -6px 1px 6px 8px rgba(0,0,0,0);
   box-shadow: 2px 5px 8px -7px #fff, -6px 1px 6px 8px rgb(0 0 0 / 0%);
   cursor: pointer;
+}
+
+.features-homepage {
+  text-align : center;
 }
 
 /* Downloads */
@@ -465,31 +484,52 @@ article .inside {
 /* Team and Credits */
 
 section#team,
-section#credits {
+section#credits,
+section#maintainers-team {
   color: #ffffff;
   background: #010101;
 }
 
+.flat:hover{
+  color: #A5FECB;
+  cursor: pointer;
+  text-decoration:none;
+}
+
+.pixel:hover{
+  color: #64B1F3;
+  cursor: pointer;
+  text-decoration:none;
+}
+
 section#team .align,
-section#credits .align {
+section#credits .align,
+section#maintainers-team .align {
   font-size: 6em;
   margin-top: 10px;
   text-align: center;
 }
 
 #team h1,
-#credits h1 {
+#credits h1,
+#maintainers-team h1 {
   font-size: 3em;
   margin-bottom: 1em;
   margin-top: 0.5em;
 }
 
+.sponsor:hover{
+  filter: hue-rotate(85deg);
+}
+
 #credits,
-#team {
+#team,
+#maintainers-team {
   padding-top: 4.75em;
 }
 
-#team {
+#team,
+#maintainers-team {
   padding-bottom: 0;
 }
 
@@ -499,13 +539,15 @@ section#credits .align {
 
 /* team */
 
-#team h3 {
+#team h3,
+#maintainers-team h3 {
   font-size: 26px;
   margin-top: 24px;
   margin-bottom: 0px;
 }
 
 #team h3,
+#maintainers-team h3,
 .job-position {
   text-align: center;
 }
@@ -800,4 +842,14 @@ footer p {
   100% {
     filter: hue-rotate(360deg);
   }
+}
+
+/* CSS will be required after complete upgrade from v2.3 to v4.5 Bootstrap */
+
+.img-circle {
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    height: 50%;
+    width: 50%;
 }
