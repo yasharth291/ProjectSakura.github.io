@@ -4,6 +4,7 @@ This page is designed by members of Project Sakura and all the code belongs to t
 Don't remove this if you intent to use this page for your website.
 -->
 <html lang="en">
+
 <head>
     <title>Sakura Stats</title>
     <meta charset="UTF-8">
@@ -16,7 +17,8 @@ Don't remove this if you intent to use this page for your website.
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- New UI -->
     <link rel="stylesheet" href="./css/bootstrap-ui.css">
@@ -40,62 +42,71 @@ Don't remove this if you intent to use this page for your website.
         /* theme */
         body {
 
+            --accent-color: #64B1F3;
             --background-color: #0F111A;
-            --accent-color :#64B1F3;
-            --text-color: #f2f2f2;
-            --container-color: #212433;
-            --table-text-color: #c9d1d9;
-            --table-body-color: #212433;
             --btn-toggle-color: #56cc9d;
-            --icon-color: #56cc9d;
-            --transition-delay: 0.5s;
+            --container-color: #212433;
             --footer-background-color: #212433;
-            --footer-color: #157a6e;
-            --footer-social-icon-color: #78c2ad;
+            --table-body-color: #212433;
+            --table-text-color: #c9d1d9;
+            --text-color: #f2f2f2;
+            --footer-link-color: #64B1F3;
+            --transition-delay: 0.5s;
 
-
-            margin: 0;
             background-color: var(--background-color);
+            margin: 0;
             transition: var(--transition-delay);
+        }
+
+        p.card-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            margin-top: 12px;
+            padding: 21px;
+        }
+
+        .header-card {
+            padding: 18px;
         }
 
         body.light {
 
+            --accent-color: #56cc9d;
             --background-color: #f7f7f9;
-            --accent-color :#56cc9d;
-            --text-color: #5A5A5A;
-            --container-color: #56cc9d;
-            --table-text-color: #5A5A5A;
-            --table-body-color: #f7f7f7;
             --btn-toggle-color: #0F111A;
-            --icon-color: #000;
+            --container-color: #56cc9d;
             --footer-background-color: #56cc9d;
-            --footer-color: #1a3b8f;
-            --footer-social-icon-color: #0349ff;
+            --footer-link-color: #085046;
+            --table-body-color: #f7f7f7;
+            --table-text-color: #5A5A5A;
+            --text-color: #5A5A5A;
 
             color: #000;
-
         }
 
-        .btn-toggle
-        {
-             background-color: var(--btn-toggle-color);
-             color: #FFF;
-             height: 33px;
-             width: 33px;
-             padding: 3px;
-             border-radius: 50%;
-             cursor: pointer;
-             border: 0;
-             transition: var(--transition-delay);
-             position: absolute;
-             top: 2.5rem;
-             right:2.5rem;
-             z-index: 999;
+        .btn-toggle {
+            background-color: var(--btn-toggle-color);
+            border: 0;
+            border-radius: 50%;
+            color: #FFF;
+            cursor: pointer;
+            height: 33px;
+            padding: 3px;
+            position: absolute;
+            right: 1.5rem;
+            transition: var(--transition-delay);
+            top: 1.5rem;
+            width: 33px;
+            z-index: 999;
+            outline: 0 !important;
         }
 
         .btn-toggle:hover,
-        .btn-toggle:focus{
+        .btn-toggle:focus {
             transform: scale(1.1);
         }
 
@@ -104,10 +115,10 @@ Don't remove this if you intent to use this page for your website.
         h3,
         h4,
         h5 {
-            font-family: 'Poppins', sans-serif;
             align-items: center;
-            margin: auto;
             color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            margin: auto;
         }
 
         h1 {
@@ -115,7 +126,7 @@ Don't remove this if you intent to use this page for your website.
             font-weight: 300;
         }
 
-        .header-card  {
+        .header-card {
             background-color: var(--container-color);
             color: #f2f2f2;
         }
@@ -125,166 +136,198 @@ Don't remove this if you intent to use this page for your website.
         ============= ADDED CSS ===============
         =======================================
         */
-        .text-center{
+        .text-center {
             text-align: center;
         }
 
         /* Table Styling */
-        th, td{
+        .table {
+            background-color: var(--table-body-color);
             border: 1px solid var(--accent-color);
+            color: var(--table-text-color);
         }
 
         .table-heading {
-            margin-bottom: 1em;
             font-weight: 700;
+            margin: 0.7em auto;
         }
 
-        .table
-        {
-            color: var(--table-text-color);
-            background-color: var(--table-body-color);
-            border: 1px solid var(--accent-color);
-        }
-
-        .table-success,.thread
-        {
-            background-color: var(--accent-color);
-        }
-        .table-success th
-        {
+        .table-success th {
             border-color: var(--accent-color);
         }
 
-        /* Footer Styling */
-        /* footer {
-        margin: 0;
-        padding: 2em 0;
-        background-color: var(--container-color)
+        .table-success,
+        .thread {
+            background-color: var(--accent-color);
         }
 
-
-        .footer-text h3,
-        .footer-text p {
-        color: #FFF;
-        margin: 1em;
+        th,
+        td {
+            border: 1px solid var(--accent-color);
+            border-top:none !important;
         }
 
-        .icon-list {
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        }
-
-        .icon-list li {
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        margin: 0 2em;
-        }
-
-        .icon-list li a {
-        font-size: 50px;
-        line-height: 50px;
-        text-decoration: none;
-        color: var(--icon-color) !important;
-        }
-
-        .icon-list li a:hover {
-        cursor: pointer;
-        color: #FFF ;
-        filter: invert(100);
-        } */
-
-        /*---------------------------------------
-           Color Animation
-        -----------------------------------------*/
-
-        @keyframes animate {
-          0% {
-            filter: hue-rotate(0deg);
-          }
-          100% {
-            filter: hue-rotate(360deg);
-          }
-        }
-
-        .color_animation {
-          animation: animate 6s linear infinite;
-        }
-
-        /*---------------------------------------
-           Footer
-        -----------------------------------------*/
-
-        footer {
-            padding: 40px 0 0 0;
-            margin: 80px 0 0 0;
-            background-color: var(--footer-background-color);
-        }
-
-        footer .footer-copyright p {
-            /* color: rgba(0, 0, 0, .8); */
-            font-size: 20px;
-            text-align: center;
-        }
-
-        footer .footer-copyright a {
-            color: var(--footer-color);
-            list-style: none;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        footer .footer-copyright a:hover {
-            animation: animate 6s linear infinite;
-        }
-
-
-        /*---------------------------------------
-           Social icon
-        -----------------------------------------*/
-
-        .social-icon {
-            position: relative;
-            padding: 0;
-            margin: 0;
-            text-align: center
-        }
-
-        .social-icon li {
-            display: inline-block;
-            list-style: none
-        }
-
-        .social-icon li a {
-            border: 2px solid transparent;
-            border-radius: 100px;
-            cursor: pointer;
-            font-size: 40px;
-            text-decoration: none;
-            transition: all .4s ease-in-out;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
+        .table thead th {
+            border-bottom: none;
             vertical-align: middle;
-            position: relative;
-            margin: 22px 4px 10px 4px;
-            color: var(--footer-social-icon-color);
         }
 
-        .social-icon li a:hover {
-            color: rgba(0, 0, 0, .9);
-            background: #4aa48a;
-            transform: scale(1.1);
-            animation: animate 6s linear infinite;
+         /* Footer Styling */
+      
+
+        .footer {
+        background-color: var(--container-color);
+        width: 100%;
+        padding: 3px 0;
+        margin-top: 18px;
+        font-family: sans-serif;
+        color: #ffffff;
         }
 
+        footer a {
+        text-decoration: none;
+        color: var(--footer-link-color);
+        }
+
+        footer a:hover {
+            text-decoration: none;
+            color: var(--footer-link-color);
+        }
+
+        .footer-holder {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 27px 12%;
+        }
+
+        .footer-holder > svg {
+        width: 65px;
+        height: 25px;
+        }
+
+
+        .sources-info {
+        display: inline-block;
+        width: 50%;
+        }
+
+        .sources-info > ul {
+        padding: 0;
+        margin: 6px 0;
+        text-decoration: none;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        font-size: 27px;
+        
+        }
+
+        .sources-info > ul > li {
+        padding-right: 15px;
+        }
+
+        .sources-info > ul > li > a {
+        text-decoration: none;
+        color: var(--footer-link-color);
+        }
+
+        .info-span {
+        font-size: 15px;
+        display: block;
+        margin: 6px 0;
+        max-width: 330px;
+        }
+
+        .team-info img {
+        width: 165px;
+        height: auto;
+        }
+
+        .footer-section-2 ul {
+        margin-top: 6px;
+        }
+
+        .footer-section-2 ul, .footer-section-2 ul > li > a {
+        list-style-type: none;
+        padding-left: 0;
+        }
+        .footer-section-2 ul > li {
+        padding-bottom: 5px;
+        }
+
+        .stats-info {
+            text-align: center;
+            border-top: 2.1px solid var(--footer-link-color);
+            margin: auto;
+            width: 93%;
+            padding: 9px 0;
+        }
+
+        @media screen and (max-width: 1130px) {
+            .footer-holder {
+            display: flex;
+            flex-wrap: wrap;
+            }
+
+            .footer-section-1 {
+            flex: 100%;
+            }
+
+            .footer-section-2 {
+            margin-top: 12px;
+            flex: 60%;
+            }
+
+            .footer-section-3 { 
+            flex: 40%;
+            }
+
+            .footer-section-3 img {
+            width: 135px;
+            height: auto;
+            }
+        
+        }
+
+        @media screen and (max-width: 575px) {
+            .header-card {
+                padding: 12px 9px;
+                width: 95%;
+                text-align: center;
+            }
+
+            .header-card h3 {
+                font-size: 24px;
+            }
+
+            .container table {
+                width: 95% !important;
+                margin: auto;
+                font-size: 12px;
+            }
+
+            .footer-holder {
+                margin: 5% 24px 5% 24px;
+            }
+
+            header > h1 {             
+                margin-top: 24px;
+            }
+
+            .team-info {
+                margin-top: 12px;
+            }
+
+            .footer-holder {
+                margin: 25px 5%;
+            }
+
+        }
 
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <div class="container btn-container">
@@ -296,7 +339,7 @@ Don't remove this if you intent to use this page for your website.
     </header>
 
     <!-- Intro Card -->
-    <div class="container card header-card mb-3" >
+    <div class="container card header-card">
         <h3 class="card-title">Project Sakura got downloaded <span class="totaldownload"></span> times.</h3>
         <p class="card-text">Note: These stats are only for official downloads, unofficial numbers are unknown.</p>
     </div>
@@ -305,7 +348,8 @@ Don't remove this if you intent to use this page for your website.
     <div class="container">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- horizontal-sakura-unit3 -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032" data-ad-slot="5690616310" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032"
+            data-ad-slot="5690616310" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
@@ -319,7 +363,7 @@ Don't remove this if you intent to use this page for your website.
                     <th>DOWNLOADS</th>
                     <th>Percentage</th>
                 </tr>
-               
+
             </thead>
             <tbody class="table_device_2">
 
@@ -331,60 +375,48 @@ Don't remove this if you intent to use this page for your website.
     <div class="container">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- horizontal-sakura-unit3 -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032" data-ad-slot="5690616310" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032"
+            data-ad-slot="5690616310" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
-        <h3 class="text-center table-heading">UNSUPPORTED DEVICES</h3>
-
-        <table class="table table-striped" style="font-weight: 600">
-            <thead class="table-success">
-                <tr>
-                    <th>DEVICES</th>
-                    <th>DOWNLOADS</th>
-                    <th>Percentage</th>
-                </tr>
-                
-            </thead>
-            <tbody class="table_device">
-
-            </tbody>
-        </table>
     </div>
 
     <!-- TABLE ENTRIES >> Countries -->
     <div class="container">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- sakura-horizontal-unit-2 -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032" data-ad-slot="8931146882" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032"
+            data-ad-slot="8931146882" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-            <!-- Blog entry -->
+        <!-- Blog entry -->
         <h3 class="text-center table-heading">TOP COUNTRIES</h3>
-            <table class="table table-striped">
-                <thead class="table-success">
-                    <tr>
-                        <th>SERIAL NUMBER</th>
-                        <th>COUNTRY NAME</th>
-                        <th>DOWNLOADS</th>
-                    </tr>
-                    
-                </thead>
-                <tbody class="countries">
+        <table class="table table-striped">
+            <thead class="table-success">
+                <tr>
+                    <th>SERIAL NUMBER</th>
+                    <th>COUNTRY NAME</th>
+                    <th>DOWNLOADS</th>
+                </tr>
 
-                </tbody>
-            </table>
-        </div>
+            </thead>
+            <tbody class="countries">
+
+            </tbody>
+        </table>
+    </div>
 
     <!-- TABLE ENTRIES >> Operating Systems -->
     <div class="container">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- sakura-horizontal-display-ad -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032" data-ad-slot="8448641591" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1277633863266032"
+            data-ad-slot="8448641591" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 
         <h3 class="text-center table-heading">OS USED TO DOWNLOAD SAKURA</h3>
@@ -395,7 +427,7 @@ Don't remove this if you intent to use this page for your website.
                     <th>COUNTRY NAME</th>
                     <th>DOWNLOADS</th>
                 </tr>
-               
+
             </thead>
             <tbody class="oses">
             </tbody>
@@ -403,48 +435,59 @@ Don't remove this if you intent to use this page for your website.
     </div>
 
     <!-- FOOTER -->
-    <!-- <footer>
-        <div class="container">
-            <ul class="icon-list">
-                <li><a class="fa fa-twitter" href="https://twitter.com/ProjectSakura_" target="_blank"></a></li>
-                <li><a class="fa fa-github" href="https://www.github.com/ProjectSakura" target="_blank"></a></li>
-            </ul>
-        </div>
-        <div class="footer-text text-center">
-            <h3>Designed by Sakura Team</h3>
-            <p>Supported by XSLTEL OU</p>
-            <p>Stats are fetched from Sourceforge.</p>
-        </div>
-    </footer> -->
-
-    <!-- Footer Section -->
-    <footer id="footer-stickey">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="footer-copyright">
-                        <p>Sponser: <a href="#">XSLTEL OU</a>
-                            | Design: <a href="#home" target="_parent">SAKURA TEAM</a>
-                        </p>
-                        <p>Stats are fetched from Sourceforge.</p>
-                    </div>
-                    <ul class="social-icon" data-wow-delay="1s">
-                        <li><a href="https://twitter.com/ProjectSakura_" target="_blank" class="fa fa-twitter"></a></li>
-                        <li><a href=href="https://www.github.com/ProjectSakura" target="_blank" class="fa fa-github"></a></li>
+   
+    <footer class="footer">
+        <div class="footer-holder">
+            <div class="footer-section-1">
+                <img src="image/sakura_footer.svg" alt="project sakura logo"/>
+                <span class="info-span">
+                    Project Sakura is a fully free and Opensource Custom ROM built around LineageOS.
+                </span>
+                <div class="sources-info">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/ProjectSakura"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://telegram.me/ProjectSakura"><i class="fa fa-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/ProjectSakura_"><i class="fa fa-twitter"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
+            <div class="footer-section-2">
+                NAVIGATION
+                <ul>
+                    <li><a href="https://projectsakura.xyz">Home</a></li>
+                    <li><a href="https://projectsakura.xyz/blog.html">Blog</a></li>
+                    <li><a href="https://projectsakura.xyz/download/">Download Now</a></li>
+                    <li><a href="https://projectsakura.xyz/stats.html">Stats</a></li>
+                </ul>
+            </div>
+            <div class="footer-section-3">
+                <div class="info">
+                    <div class="team-info">
+                        Sponsored by: <br>
+                        <p><a href="https://xsl.tel"><img
+                                    src="https://projectsakura.xyz/image/spon-white.png" alt="sponsor logo"/></a></p>
+                        Project Maintained by <a href="https://github.com/LordShenron">Shen</a> & <a
+                            href="https://github.com/ArunTeltia">ArunTeltia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-info">
+            Stats are fetched from Sourceforge
         </div>
     </footer>
 
-    <script src="mantainers.js"></script>
-    <script src="mantainers2.js"></script>
     <script src="js/stat.js"></script>
-
     <!-- TOGGLE THEME -->
     <script>
-        document.querySelector(".btn-toggle").addEventListener('click', ()=>{
-         document.querySelector("body").classList.toggle("light");
+        document.querySelector(".btn-toggle").addEventListener('click', () => {
+            document.querySelector("body").classList.toggle("light");
         });
 
     </script>
